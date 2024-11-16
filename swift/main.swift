@@ -66,7 +66,7 @@ do {
             // Decode UTXO.
             if let (txId, txIndex, height, coinbase, amount, outType, script, address) = parser.parse(tx: key, coin: value) {
 
-                if count % 10_000 == 0 {
+                if count > 0 && count % 10_000 == 0 {
                     print("\(count) records were processed.")
                 }
 

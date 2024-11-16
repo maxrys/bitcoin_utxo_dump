@@ -13,10 +13,10 @@ class Report {
     private let connection: Connection
     private let modes: Set<mode>
 
-    private var balance_insertStmt:Statement?
-    private var balance_updateStmt:Statement?
-    private var transactions_insertStmt:Statement?
-    private var badTransactions_insertStmt:Statement?
+    private var balance_insertStmt: Statement?
+    private var balance_updateStmt: Statement?
+    private var transactions_insertStmt: Statement?
+    private var badTransactions_insertStmt: Statement?
 
     init(file: String, modes: Set<mode> = [.dumpBalance]) throws {
         self.file = file

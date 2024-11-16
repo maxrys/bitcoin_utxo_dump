@@ -2,21 +2,18 @@ import Foundation
 
 class Test {
 
-    /*
-        privWIF    : Private Key WIF (51 characters base58, starts with a "5")
-        privWIFComp: Private Key WIF Compressed (52 characters base58, starts with a "K" or "L")
-        privHex    : Private Key Hexadecimal Format (64 characters [0-9A-F])
-        privBase64 : Private Key Base64 (44 characters)
-        ---------------------------------------------------------------------------
-        pub        : Public Key (130 characters [0-9A-F])
-        pubComp    : Public compressed ey (66 characters [0-9A-F])
-        ---------------------------------------------------------------------------
-        address    : Bitcoin P2PKH Address
-        addressComp: Bitcoin P2PKH Compressed Address
-    */
+    //  privWIF    : Private Key WIF (51 characters base58, starts with a "5")
+    //  privWIFComp: Private Key WIF Compressed (52 characters base58, starts with a "K" or "L")
+    //  privHex    : Private Key Hexadecimal Format (64 characters [0-9A-F])
+    //  privBase64 : Private Key Base64 (44 characters)
+    //  ---------------------------------------------------------------------------
+    //  pub        : Public Key (130 characters [0-9A-F])
+    //  pubComp    : Public Key Compressed (66 characters [0-9A-F])
+    //  ---------------------------------------------------------------------------
+    //  address    : Bitcoin P2PKH Address
+    //  addressComp: Bitcoin P2PKH Address Compressed
 
     static let etaloneWallet = (
-        seed        : "seed-phrase",
         privWIF     : "5KaAT2c5GYRSYPjkpyyuMsw26u9pjzZwdcTVE9FmiDmXV1rnVpw",
         privWIFComp : "L4yNht5oqbgsjZMiSnWA79oRs3Bwim6Q8bVub1SCLwMXYSnbzeDA",
         privHex     : "e753037ec3234a348c58538045e9d051a3035b1301c828761b1c9c98e8bb7012",
@@ -42,30 +39,23 @@ class Test {
         Amount   : 65279
     )
 
-    static func dataFromHexEncodedString() -> Bool {
-        let data = Test.etaloneWallet.privKeyData
-        let hex = Test.etaloneWallet.privHex
-        if Data(data            ) .hexEncodedString() != hex  {return false}
-        if Data(hexEncoded: hex )?.hexEncodedString() != hex  {return false}
-        if Data(hexEncoded: "00")?.hexEncodedString() != "00" {return false}
-        if Data(hexEncoded: "0f")?.hexEncodedString() != "0f" {return false}
-        if Data(hexEncoded: "f0")?.hexEncodedString() != "f0" {return false}
-        if Data(hexEncoded: "ff")?.hexEncodedString() != "ff" {return false}
-        if Data(hexEncoded: "a" )?.hexEncodedString() != nil  {return false}
-        if Data(hexEncoded: "aX")?.hexEncodedString() != nil  {return false}
-        if Data(hexEncoded: "Xa")?.hexEncodedString() != nil  {return false}
-        if Data(hexEncoded: "XX")?.hexEncodedString() != nil  {return false}
-        return true
-    }
+    static func dataHex() -> Bool {
 
-    static func hexEncodedString() -> Bool {
-        var data = Data()
-        for value in 0...255 {
-            data.append(
-                UInt8(value)
-            )
-        }
-        let etalone =
+        let privKeyData = Test.etaloneWallet.privKeyData
+        let privHex     = Test.etaloneWallet.privHex
+        if Data(privKeyData        ) .hexEncodedString() != privHex {return false}
+        if Data(hexEncoded: privHex)?.hexEncodedString() != privHex {return false}
+        if Data(hexEncoded: "00"   )?.hexEncodedString() != "00"    {return false}
+        if Data(hexEncoded: "0f"   )?.hexEncodedString() != "0f"    {return false}
+        if Data(hexEncoded: "f0"   )?.hexEncodedString() != "f0"    {return false}
+        if Data(hexEncoded: "ff"   )?.hexEncodedString() != "ff"    {return false}
+        if Data(hexEncoded: "a"    )?.hexEncodedString() != nil     {return false}
+        if Data(hexEncoded: "aX"   )?.hexEncodedString() != nil     {return false}
+        if Data(hexEncoded: "Xa"   )?.hexEncodedString() != nil     {return false}
+        if Data(hexEncoded: "XX"   )?.hexEncodedString() != nil     {return false}
+
+        // test long hex value
+        let longHex =
             "00010203040506070809" + "0a0b0c0d0e0f10111213" + "1415161718191a1b1c1d" +
             "1e1f2021222324252627" + "28292a2b2c2d2e2f3031" + "32333435363738393a3b" +
             "3c3d3e3f404142434445" + "464748494a4b4c4d4e4f" + "50515253545556575859" +
@@ -75,12 +65,21 @@ class Test {
             "b4b5b6b7b8b9babbbcbd" + "bebfc0c1c2c3c4c5c6c7" + "c8c9cacbcccdcecfd0d1" +
             "d2d3d4d5d6d7d8d9dadb" + "dcdddedfe0e1e2e3e4e5" + "e6e7e8e9eaebecedeeef" +
             "f0f1f2f3f4f5f6f7f8f9" + "fafbfcfdfeff"
-        return data.hexEncodedString() == etalone
+        var longData = Data()
+        for value in 0...255 {
+            longData.append(
+                UInt8(value)
+            )
+        }
+        guard longData.hexEncodedString() == longHex else {
+            return false
+        }
+
+        return true
     }
 
     static func runForCore() -> Bool {
-        guard Test.dataFromHexEncodedString() else {return false}
-        guard Test.hexEncodedString()         else {return false}
+        guard Test.dataHex() else {return false}
         return true
     }
 
