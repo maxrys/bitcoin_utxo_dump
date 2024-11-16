@@ -21,7 +21,7 @@ The parsing result is uploaded to the SQLite database.
 
 
 
-# Python version
+# PYTHON version
 
 The following libraries must be installed:
 
@@ -44,7 +44,7 @@ Run the script:
 
 
 
-# Swift version
+# SWIFT version
 
 Contains *signed* dynamic libraries:
 
@@ -81,17 +81,12 @@ Prematurely canceling parsing process does not remove locks from LevelDB.
 
 Was created on Swift v.5+.
 
-Depends on libraries:
+Depends on libraries (were built into the project):
 
 - [https://github.com/anquii/RIPEMD160](url)
 - [https://github.com/attaswift/BigInt](url)
 - [https://github.com/stephencelis/SQLite.swift](url)
-
-Update libraries dependencies if required.
-
-Contains modified libraries:
-
-- [https://github.com/emilwojtaszek/leveldb-swift](url)
+- [https://github.com/emilwojtaszek/leveldb-swift](url) (modified and adopted)
 
 Go to `Edit Scheme... → Arguments → Arguments Passed on Launch` and change paths to *chainstate* and *report* if required.
 
@@ -125,7 +120,7 @@ Binary file cannot be run with *unsigned* dynamic libraries.
 
 
 
-# Wiki
+# WIKI
 
 Address types:
 

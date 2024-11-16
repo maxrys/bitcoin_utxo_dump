@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		50415DF92CE27D2800E40BC9 /* BigInt in Frameworks */ = {isa = PBXBuildFile; productRef = 50415DF82CE27D2800E40BC9 /* BigInt */; };
-		50415DFC2CE27D3800E40BC9 /* RIPEMD160 in Frameworks */ = {isa = PBXBuildFile; productRef = 50415DFB2CE27D3800E40BC9 /* RIPEMD160 */; };
-		50415DFF2CE27D6900E40BC9 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 50415DFE2CE27D6900E40BC9 /* SQLite */; };
+		50E572722CE8B0C200D8A212 /* BigInt in Frameworks */ = {isa = PBXBuildFile; productRef = 50E572712CE8B0C200D8A212 /* BigInt */; };
+		50E573082CE8B18C00D8A212 /* RIPEMD160 in Frameworks */ = {isa = PBXBuildFile; productRef = 50E573072CE8B18C00D8A212 /* RIPEMD160 */; };
+		50E573812CE8B3F500D8A212 /* BigInt in Frameworks */ = {isa = PBXBuildFile; productRef = 50E573802CE8B3F500D8A212 /* BigInt */; };
+		50E573842CE8B40400D8A212 /* RIPEMD160 in Frameworks */ = {isa = PBXBuildFile; productRef = 50E573832CE8B40400D8A212 /* RIPEMD160 */; };
+		50E573872CE8B41400D8A212 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 50E573862CE8B41400D8A212 /* SQLite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,18 +33,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-		50415E122CE280E900E40BC9 /* Exceptions for "swift" folder in "Embed Libraries" phase from "dump" target */ = {
+		50E5738B2CE8B4C000D8A212 /* Exceptions for "swift" folder in "Embed Libraries" phase from "dump" target */ = {
 			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
 			attributesByRelativePath = {
-				LevelDB/bin/libleveldb.1.dylib = (CodeSignOnCopy, );
-				LevelDB/bin/libsnappy.1.dylib = (CodeSignOnCopy, );
-				LevelDB/bin/libtcmalloc.4.dylib = (CodeSignOnCopy, );
+				packages/leveldb/bin/libleveldb.1.dylib = (CodeSignOnCopy, );
+				packages/leveldb/bin/libsnappy.1.dylib = (CodeSignOnCopy, );
+				packages/leveldb/bin/libtcmalloc.4.dylib = (CodeSignOnCopy, );
 			};
 			buildPhase = 50415E112CE280E900E40BC9 /* Embed Libraries */;
 			membershipExceptions = (
-				LevelDB/bin/libleveldb.1.dylib,
-				LevelDB/bin/libsnappy.1.dylib,
-				LevelDB/bin/libtcmalloc.4.dylib,
+				packages/leveldb/bin/libleveldb.1.dylib,
+				packages/leveldb/bin/libsnappy.1.dylib,
+				packages/leveldb/bin/libtcmalloc.4.dylib,
 			);
 		};
 /* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
@@ -51,7 +53,7 @@
 		50FA0FAB2CDE0D2600A08BF5 /* swift */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				50415E122CE280E900E40BC9 /* Exceptions for "swift" folder in "Embed Libraries" phase from "dump" target */,
+				50E5738B2CE8B4C000D8A212 /* Exceptions for "swift" folder in "Embed Libraries" phase from "dump" target */,
 			);
 			path = swift;
 			sourceTree = "<group>";
@@ -63,9 +65,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50415DFF2CE27D6900E40BC9 /* SQLite in Frameworks */,
-				50415DFC2CE27D3800E40BC9 /* RIPEMD160 in Frameworks */,
-				50415DF92CE27D2800E40BC9 /* BigInt in Frameworks */,
+				50E573872CE8B41400D8A212 /* SQLite in Frameworks */,
+				50E573082CE8B18C00D8A212 /* RIPEMD160 in Frameworks */,
+				50E572722CE8B0C200D8A212 /* BigInt in Frameworks */,
+				50E573812CE8B3F500D8A212 /* BigInt in Frameworks */,
+				50E573842CE8B40400D8A212 /* RIPEMD160 in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,9 +113,11 @@
 			);
 			name = dump;
 			packageProductDependencies = (
-				50415DF82CE27D2800E40BC9 /* BigInt */,
-				50415DFB2CE27D3800E40BC9 /* RIPEMD160 */,
-				50415DFE2CE27D6900E40BC9 /* SQLite */,
+				50E572712CE8B0C200D8A212 /* BigInt */,
+				50E573072CE8B18C00D8A212 /* RIPEMD160 */,
+				50E573802CE8B3F500D8A212 /* BigInt */,
+				50E573832CE8B40400D8A212 /* RIPEMD160 */,
+				50E573862CE8B41400D8A212 /* SQLite */,
 			);
 			productName = swift_utxo_dump;
 			productReference = 506F73A22CD26E3200E3074C /* dump */;
@@ -142,9 +148,9 @@
 			mainGroup = 506F73332CD24EDD00E3074C;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				50415DF72CE27D2800E40BC9 /* XCRemoteSwiftPackageReference "BigInt" */,
-				50415DFA2CE27D3800E40BC9 /* XCRemoteSwiftPackageReference "RIPEMD160" */,
-				50415DFD2CE27D6800E40BC9 /* XCRemoteSwiftPackageReference "SQLite" */,
+				50E5737F2CE8B3F500D8A212 /* XCLocalSwiftPackageReference "swift/packages/bigint" */,
+				50E573822CE8B40400D8A212 /* XCLocalSwiftPackageReference "swift/packages/ripemd160" */,
+				50E573852CE8B41400D8A212 /* XCLocalSwiftPackageReference "swift/packages/sqlite" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 506F73332CD24EDD00E3074C;
@@ -303,10 +309,12 @@
 					"$(PROJECT_DIR)/LevelDB",
 					"$(PROJECT_DIR)/swift/LevelDB",
 					"$(PROJECT_DIR)/swift/LevelDB/bin",
+					"$(PROJECT_DIR)/swift/leveldb/bin",
+					"$(PROJECT_DIR)/swift/packages/leveldb/bin",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = swift/LevelDB/headers/LevelDB.h;
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = swift/packages/leveldb/headers/LevelDB.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 			};
@@ -325,10 +333,12 @@
 					"$(PROJECT_DIR)/LevelDB",
 					"$(PROJECT_DIR)/swift/LevelDB",
 					"$(PROJECT_DIR)/swift/LevelDB/bin",
+					"$(PROJECT_DIR)/swift/leveldb/bin",
+					"$(PROJECT_DIR)/swift/packages/leveldb/bin",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = swift/LevelDB/headers/LevelDB.h;
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = swift/packages/leveldb/headers/LevelDB.h;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -356,47 +366,40 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		50415DF72CE27D2800E40BC9 /* XCRemoteSwiftPackageReference "BigInt" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/attaswift/BigInt.git";
-			requirement = {
-				kind = exactVersion;
-				version = 5.1.0;
-			};
+/* Begin XCLocalSwiftPackageReference section */
+		50E5737F2CE8B3F500D8A212 /* XCLocalSwiftPackageReference "swift/packages/bigint" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = swift/packages/bigint;
 		};
-		50415DFA2CE27D3800E40BC9 /* XCRemoteSwiftPackageReference "RIPEMD160" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/anquii/RIPEMD160/";
-			requirement = {
-				kind = exactVersion;
-				version = 1.0.0;
-			};
+		50E573822CE8B40400D8A212 /* XCLocalSwiftPackageReference "swift/packages/ripemd160" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = swift/packages/ripemd160;
 		};
-		50415DFD2CE27D6800E40BC9 /* XCRemoteSwiftPackageReference "SQLite" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/stephencelis/SQLite.swift";
-			requirement = {
-				kind = exactVersion;
-				version = 0.15.3;
-			};
+		50E573852CE8B41400D8A212 /* XCLocalSwiftPackageReference "swift/packages/sqlite" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = swift/packages/sqlite;
 		};
-/* End XCRemoteSwiftPackageReference section */
+/* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		50415DF82CE27D2800E40BC9 /* BigInt */ = {
+		50E572712CE8B0C200D8A212 /* BigInt */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 50415DF72CE27D2800E40BC9 /* XCRemoteSwiftPackageReference "BigInt" */;
 			productName = BigInt;
 		};
-		50415DFB2CE27D3800E40BC9 /* RIPEMD160 */ = {
+		50E573072CE8B18C00D8A212 /* RIPEMD160 */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 50415DFA2CE27D3800E40BC9 /* XCRemoteSwiftPackageReference "RIPEMD160" */;
 			productName = RIPEMD160;
 		};
-		50415DFE2CE27D6900E40BC9 /* SQLite */ = {
+		50E573802CE8B3F500D8A212 /* BigInt */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 50415DFD2CE27D6800E40BC9 /* XCRemoteSwiftPackageReference "SQLite" */;
+			productName = BigInt;
+		};
+		50E573832CE8B40400D8A212 /* RIPEMD160 */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RIPEMD160;
+		};
+		50E573862CE8B41400D8A212 /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
 			productName = SQLite;
 		};
 /* End XCSwiftPackageProductDependency section */
