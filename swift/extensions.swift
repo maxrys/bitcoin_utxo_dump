@@ -1,5 +1,5 @@
 import Foundation
-import CommonCrypto
+import CryptoKit
 import RIPEMD160
 
 extension Data {
@@ -103,17 +103,7 @@ extension Data {
     }
 
     func sha256() -> Data {
-        var hash = [UInt8](
-            repeating: 0,
-            count: Int(CC_SHA256_DIGEST_LENGTH)
-        )
-        self.withUnsafeBytes({ UnsafeRawBufferPointer in
-            _ = CC_SHA256(
-                UnsafeRawBufferPointer.baseAddress,
-                CC_LONG(self.count),
-                &hash
-            )
-        })
+        let hash = SHA256.hash(data: self)
         return Data(hash)
     }
 
