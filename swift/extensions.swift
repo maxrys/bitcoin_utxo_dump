@@ -54,7 +54,7 @@ extension Data {
         var zeroCount = 0
         var data = [UInt8]()
         for byte in self {
-            if byte == 0 && data.count == 0 {
+            if byte == 0 && data.isEmpty {
                 zeroCount += 1
             } else {
                 data.append(byte)
