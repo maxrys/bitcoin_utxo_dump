@@ -1,0 +1,408 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		50E572722CE8B0C200D8A212 /* BigInt in Frameworks */ = {isa = PBXBuildFile; productRef = 50E572712CE8B0C200D8A212 /* BigInt */; };
+		50E573082CE8B18C00D8A212 /* RIPEMD160 in Frameworks */ = {isa = PBXBuildFile; productRef = 50E573072CE8B18C00D8A212 /* RIPEMD160 */; };
+		50E573812CE8B3F500D8A212 /* BigInt in Frameworks */ = {isa = PBXBuildFile; productRef = 50E573802CE8B3F500D8A212 /* BigInt */; };
+		50E573842CE8B40400D8A212 /* RIPEMD160 in Frameworks */ = {isa = PBXBuildFile; productRef = 50E573832CE8B40400D8A212 /* RIPEMD160 */; };
+		50E573872CE8B41400D8A212 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 50E573862CE8B41400D8A212 /* SQLite */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		50415E112CE280E900E40BC9 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		506F73A22CD26E3200E3074C /* dump */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = dump; sourceTree = BUILT_PRODUCTS_DIR; };
+		50FA0FAE2CDE0E1600A08BF5 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		50E5738B2CE8B4C000D8A212 /* Exceptions for "swift" folder in "Embed Libraries" phase from "dump" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			attributesByRelativePath = {
+				packages/leveldb/bin/libleveldb.1.dylib = (CodeSignOnCopy, );
+				packages/leveldb/bin/libsnappy.1.dylib = (CodeSignOnCopy, );
+				packages/leveldb/bin/libtcmalloc.4.dylib = (CodeSignOnCopy, );
+			};
+			buildPhase = 50415E112CE280E900E40BC9 /* Embed Libraries */;
+			membershipExceptions = (
+				packages/leveldb/bin/libleveldb.1.dylib,
+				packages/leveldb/bin/libsnappy.1.dylib,
+				packages/leveldb/bin/libtcmalloc.4.dylib,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		50FA0FAB2CDE0D2600A08BF5 /* swift */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				50E5738B2CE8B4C000D8A212 /* Exceptions for "swift" folder in "Embed Libraries" phase from "dump" target */,
+			);
+			path = swift;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		506F73392CD24EDD00E3074C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50E573872CE8B41400D8A212 /* SQLite in Frameworks */,
+				50E573082CE8B18C00D8A212 /* RIPEMD160 in Frameworks */,
+				50E572722CE8B0C200D8A212 /* BigInt in Frameworks */,
+				50E573812CE8B3F500D8A212 /* BigInt in Frameworks */,
+				50E573842CE8B40400D8A212 /* RIPEMD160 in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		506F73332CD24EDD00E3074C = {
+			isa = PBXGroup;
+			children = (
+				506F73A22CD26E3200E3074C /* dump */,
+				50FA0FAE2CDE0E1600A08BF5 /* readme.md */,
+				50FA0FAB2CDE0D2600A08BF5 /* swift */,
+				50FA0FE42CDE113C00A08BF5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		50FA0FE42CDE113C00A08BF5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		506F733B2CD24EDD00E3074C /* dump */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 506F73432CD24EDD00E3074C /* Build configuration list for PBXNativeTarget "dump" */;
+			buildPhases = (
+				506F73382CD24EDD00E3074C /* Sources */,
+				506F73392CD24EDD00E3074C /* Frameworks */,
+				50415E112CE280E900E40BC9 /* Embed Libraries */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				50FA0FAB2CDE0D2600A08BF5 /* swift */,
+			);
+			name = dump;
+			packageProductDependencies = (
+				50E572712CE8B0C200D8A212 /* BigInt */,
+				50E573072CE8B18C00D8A212 /* RIPEMD160 */,
+				50E573802CE8B3F500D8A212 /* BigInt */,
+				50E573832CE8B40400D8A212 /* RIPEMD160 */,
+				50E573862CE8B41400D8A212 /* SQLite */,
+			);
+			productName = swift_utxo_dump;
+			productReference = 506F73A22CD26E3200E3074C /* dump */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		506F73342CD24EDD00E3074C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1610;
+				TargetAttributes = {
+					506F733B2CD24EDD00E3074C = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = 506F73372CD24EDD00E3074C /* Build configuration list for PBXProject "dump" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 506F73332CD24EDD00E3074C;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				50E5737F2CE8B3F500D8A212 /* XCLocalSwiftPackageReference "swift/packages/bigint" */,
+				50E573822CE8B40400D8A212 /* XCLocalSwiftPackageReference "swift/packages/ripemd160" */,
+				50E573852CE8B41400D8A212 /* XCLocalSwiftPackageReference "swift/packages/sqlite" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 506F73332CD24EDD00E3074C;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				506F733B2CD24EDD00E3074C /* dump */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		506F73382CD24EDD00E3074C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		506F73412CD24EDD00E3074C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		506F73422CD24EDD00E3074C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				"EXCLUDED_ARCHS[sdk=*]" = arm64;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		506F73442CD24EDD00E3074C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 97CZR6J379;
+				ENABLE_HARDENED_RUNTIME = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/leveldb/1.23_1/lib,
+					"$(PROJECT_DIR)/LevelDB",
+					"$(PROJECT_DIR)/swift/LevelDB",
+					"$(PROJECT_DIR)/swift/LevelDB/bin",
+					"$(PROJECT_DIR)/swift/leveldb/bin",
+					"$(PROJECT_DIR)/swift/packages/leveldb/bin",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = swift/packages/leveldb/headers/LevelDB.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		506F73452CD24EDD00E3074C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 97CZR6J379;
+				ENABLE_HARDENED_RUNTIME = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/leveldb/1.23_1/lib,
+					"$(PROJECT_DIR)/LevelDB",
+					"$(PROJECT_DIR)/swift/LevelDB",
+					"$(PROJECT_DIR)/swift/LevelDB/bin",
+					"$(PROJECT_DIR)/swift/leveldb/bin",
+					"$(PROJECT_DIR)/swift/packages/leveldb/bin",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = swift/packages/leveldb/headers/LevelDB.h;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		506F73372CD24EDD00E3074C /* Build configuration list for PBXProject "dump" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				506F73412CD24EDD00E3074C /* Debug */,
+				506F73422CD24EDD00E3074C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		506F73432CD24EDD00E3074C /* Build configuration list for PBXNativeTarget "dump" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				506F73442CD24EDD00E3074C /* Debug */,
+				506F73452CD24EDD00E3074C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		50E5737F2CE8B3F500D8A212 /* XCLocalSwiftPackageReference "swift/packages/bigint" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = swift/packages/bigint;
+		};
+		50E573822CE8B40400D8A212 /* XCLocalSwiftPackageReference "swift/packages/ripemd160" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = swift/packages/ripemd160;
+		};
+		50E573852CE8B41400D8A212 /* XCLocalSwiftPackageReference "swift/packages/sqlite" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = swift/packages/sqlite;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		50E572712CE8B0C200D8A212 /* BigInt */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = BigInt;
+		};
+		50E573072CE8B18C00D8A212 /* RIPEMD160 */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RIPEMD160;
+		};
+		50E573802CE8B3F500D8A212 /* BigInt */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = BigInt;
+		};
+		50E573832CE8B40400D8A212 /* RIPEMD160 */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RIPEMD160;
+		};
+		50E573862CE8B41400D8A212 /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 506F73342CD24EDD00E3074C /* Project object */;
+}
